@@ -1,90 +1,540 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-    }
-    header {
-      text-align: center;
-    }
-    section {
-      margin-bottom: 20px;
-    }
-    h2 {
-      color: #333;
-    }
-    h3 {
-      color: #555;
-    }
-    p {
-      color: #777;
-    }
-  </style>
-  <title>Adrian Łukasiewicz - Portfolio</title>
-</head>
-<body>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <!-- METADANE SEO -->
+    <title>Portfolio - Adrian Łukasiewicz: Nowoczesny pracownik 2025</title>
+    <meta name="description" content="Profesjonalne portfolio Adriana Łukasiewicza – nowoczesnego pracownika roku 2025. Innowacyjne projekty, zarządzanie zespołem, technologie 3D, VR, umiejętności miękkie i twarde." />
+    <meta name="keywords" content="portfolio, nowoczesny pracownik, 2025, innowacje, zarządzanie zespołem, technologie 3D, VR, umiejętności, projekty, nowoczesne narzędzia" />
+    <meta name="author" content="Adrian Łukasiewicz" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Portfolio - Adrian Łukasiewicz: Nowoczesny pracownik 2025" />
+    <meta property="og:description" content="Poznaj wszechstronne portfolio Adriana Łukasiewicza – innowacyjnego pracownika roku 2025." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/portfolio" />
+    <meta property="og:image" content="https://example.com/images/cover.png" />
+    
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Portfolio - Adrian Łukasiewicz: Nowoczesny pracownik 2025" />
+    <meta name="twitter:description" content="Poznaj portfolio Adriana Łukasiewicza – innowacyjnego pracownika roku 2025." />
+    <meta name="twitter:image" content="https://example.com/images/cover.png" />
+    
+    <!-- VIEWPORT -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  
+    <!-- Pliki CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  </head>
+<body class="dark-mode">
 
+  <!-- ========== HEADER ========== -->
   <header>
-    <h1>ADRIAN ŁUKASIEWICZ</h1>
-    <p>725 756 455 | ADRIANLUKASIEWICZ93@GMAIL.COM</p>
-  </header>
+  <div class="header-container">
+    <div class="brand">
+      <span class="logo">AL</span>
+      <div class="brand-info">
+        <h1>Adrian Łukasiewicz</h1>
+        <p>Specjalista ds. GeoInformatyki</p>
+      </div>
+    </div>
+  </div>
+</header>
 
-  <section>
-    <h2>Professional Experience</h2>
-    <h3>Geoinformatics Specialist at XGeo/Zenit/Fotokart (2018-Present)</h3>
-    <ul>
-      <li>Fulfillment of contracts for ARiMR</li>
-      <li>Developing guidelines for functionality changes and conducting software testing for project execution.</li>
-      <!-- Add other professional experience details -->
-    </ul>
+
+  <!-- ========== BANER ========== -->
+  <section class="banner">
+    <h2>Profesjonalne Portfolio</h2>
+    <p>Wizualizacja danych. Projekty 3D. Rzetelność.</p>
+    <button class="btn-primary">Poznaj mnie</button>
   </section>
 
-  <section>
-    <h2>Laser Scanning</h2>
-    <ul>
-      <li>Registration, unification, cleaning, and exporting of point clouds.</li>
-      <li>3D modeling based on point clouds and technical drawings.</li>
-      <li>Creating virtual tours, assembling panoramas, preparing graphic materials, and publishing the product.</li>
-    </ul>
+ <!-- ========== KONTAKT ========== -->
+  <section id="kontakt">
+    <h2>Dane kontaktowe</h2>
+    <div class="grid-section">
+
+      <!-- Telefon -->
+      <article class="card skill-card">
+        <img class="skill-logo" src="https://cdn-icons-png.flaticon.com/512/159/159832.png" alt="Telefon">
+        <h3>Telefon</h3>
+        <p class="degree">+48 725 756 455</p>
+        <p class="duration">Dostępny w godzinach 10:00–18:00</p>
+      </article>
+
+      <!-- Email -->
+      <article class="card skill-card">
+        <img class="skill-logo" src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+        <h3>Email</h3>
+        <p class="degree">adrianlukasiewicz93@gmail.com</p>
+        <p class="duration">Odpowiedź zwykle w ciągu 24h</p>
+      </article>
+
+      <!-- Lokalizacja -->
+      <article class="card skill-card">
+        <img class="skill-logo" src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Lokalizacja">
+        <h3>Miasto</h3>
+        <p class="degree">Świnoujście</p>
+        <p class="duration">woj. zachodniopomorskie</p>
+      </article>
+
+    </div>
   </section>
 
-  <section>
-    <h2>Visualizations and Animations</h2>
-    <ul>
-      <li>Transforming point clouds into marketing visualizations.</li>
-      <li>Producing high-quality films, screenshots, and orthophotomaps.</li>
-      <li>Directing and post-production.</li>
-    </ul>
+
+  <!-- ========== DOŚWIADCZENIE ========== -->
+  <section id="doswiadczenie" class="timeline-section">
+    <h2>Doświadczenie zawodowe</h2>
+  
+    <div class="timeline">
+      
+      <!-- 1. Fotokart (2023–2024) -->
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-line">
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <img 
+            src="https://fotokart.pl/templates/fotokart/assets/img/logo.png" 
+            alt="Fotokart logo" 
+            class="company-logo"
+          />
+          <h3>GeoInformatics Specialist <span>|</span> 2023–2024</h3>
+          <p class="company-name">Fotokart Sp. z o.o. · Umowa zlecenie/freelancing</p>
+          <p class="duration">sty 2024 – kwi 2024 · 4 mies. · Szczecin, Praca hybrydowa</p>
+          
+          <ul class="achievements">
+            <li><strong>🤝 Building ARiMR Relationships</strong> – Maintaining strategic contacts and ensuring effective communication with a key partner.</li>
+            <li><strong>📊 Project Oversight and Optimization</strong> – Coordinating and monitoring projects to ensure their efficient execution.</li>
+            <li><strong>👥 Team Support and Development</strong> – Providing mentoring, consultations, and assistance to colleagues.</li>
+            <li><strong>🔍 Operational Process Management</strong> – Proactively improving internal procedures and addressing daily challenges.</li>
+            <li><strong>🚀 Holistic Approach to Achieving Objectives</strong> – Combining technical expertise with managerial skills for comprehensive execution.</li>
+          </ul>
+  
+          <p class="skills">
+            <strong>Umiejętności:</strong>
+            Problem Solving &amp; Analytical Thinking · Advanced Data Analysis &amp; GIS Processing · 
+            Project &amp; Team Management · Change Management · Strategic Planning · Negotiation and Mediation · 
+            Python · Microsoft Office · Decisiveness · Risk Management
+          </p>
+        </div>
+      </div>
+  
+      <!-- 2. XGEO (GeoInformatics Specialist | 2023–2024) -->
+      <div class="timeline-item" data-aos="fade-left">
+        <div class="timeline-line">
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <img 
+            src="https://cdn-icons-png.flaticon.com/512/747/747376.png" 
+            alt="XGEO logo" 
+            class="company-logo"
+          />
+          <h3>GeoInformatics Specialist <span>|</span> 2023–2024</h3>
+          <p class="company-name">XGEO · Pełny etat</p>
+          <p class="duration">lip 2022 – sty 2024 · 1 rok 7 mies.</p>
+  
+          <ul class="achievements">
+            <li><strong>🚀 Independent project implementation</strong> – Managing and executing projects independently for ARiMR.</li>
+            <li><strong>🖥 Interactive spatial presentations</strong> – Creating realistic, interactive visualizations that enable detailed exploration of objects.</li>
+            <li><strong>🌐 Remote visualization</strong> – Developing solutions that support remote tours and spatial presentations.</li>
+            <li><strong>📐 3D modeling and spatial analysis</strong> – Precisely creating 3D models and conducting spatial analyses based on laser scan data.</li>
+            <li><strong>📄 Accurate visualization and documentation</strong> – Supporting the precise presentation and documentation of objects.</li>
+          </ul>
+  
+          <p class="skills">
+            <strong>Umiejętności:</strong>
+            Microsoft Power BI · Problem Solving &amp; Analytical Thinking · Nubigon · 
+            Advanced Data Analysis &amp; GIS Processing · Project &amp; Team Management · DaVinci Resolve · 
+            Modern IT Expertise &amp; AI Integration · QGIS · 3DVista · Python · Microsoft Office · 3D Visualization &amp; Interactive Modeling
+          </p>
+        </div>
+      </div>
+  
+      <!-- 3. XGEO (GeoInformatic | 2021–2022) -->
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-line">
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <img 
+            src="https://cdn-icons-png.flaticon.com/512/747/747376.png" 
+            alt="XGEO logo" 
+            class="company-logo"
+          />
+          <h3>GeoInformatic <span>|</span> 2021–2022</h3>
+          <p class="company-name">XGEO · Pełny etat</p>
+          <p class="duration">lip 2020 – lip 2022 · 2 lata 1 mies. · Szczecin, Praca stacjonarna</p>
+  
+          <ul class="achievements">
+            <li><strong>🔍 Precise software analysis</strong> – Thorough evaluation and verification of the performance of proprietary systems used in ARiMR project implementations.</li>
+            <li><strong>📝 Preparing guidelines for developers</strong> – Developing clear instructions and documentation to support software development.</li>
+            <li><strong>🐞 Testing and bug reporting</strong> – Diligently testing applications and reporting any issues.</li>
+            <li><strong>🤝 Recruitment and training</strong> – Sourcing and developing employee skills to meet the project needs.</li>
+            <li><strong>👨‍💼 Team management</strong> – Leading and motivating a team of up to 10 people while monitoring performance.</li>
+          </ul>
+  
+          <p class="skills">
+            <strong>Umiejętności:</strong>
+            Problem Solving &amp; Analytical Thinking · Recruitment and training · Preparing guidelines for developers · 
+            Team management · Precise software analysis · Microsoft Office · Testing and bug reporting · 
+            3D Visualization &amp; Interactive Modeling · Digital Transformation &amp; Process Optimization · MicroStation
+          </p>
+        </div>
+      </div>
+  
+      <!-- 4. XGEO (Junior GeoInformatic | 2018–2020) -->
+      <div class="timeline-item" data-aos="fade-left">
+        <div class="timeline-line">
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <img 
+            src="https://cdn-icons-png.flaticon.com/512/747/747376.png" 
+            alt="XGEO logo" 
+            class="company-logo"
+          />
+          <h3>Junior GeoInformatic <span>|</span> 2018–2020</h3>
+          <p class="company-name">XGEO · Pełny etat</p>
+          <p class="duration">cze 2018 – lip 2020 · 2 lata 2 mies. · Szczecin, Praca stacjonarna</p>
+  
+          <ul class="achievements">
+            <li><strong>🔄 Execution of cyclical projects for ARiMR</strong> – Supporting the EU grant allocation process.</li>
+            <li><strong>📄 Processing and converting analog documentation</strong> – Digital transformation for a wide range of geospatial data.</li>
+            <li><strong>🗺 Precise mapping of elevation points</strong> – Converting them into vector data, aiding geospatial analysis.</li>
+          </ul>
+  
+          <p class="skills">
+            <strong>Umiejętności:</strong>
+            Conducting topographic surveys · High competence in using IT tools · Problem Solving &amp; Analytical Thinking · 
+            Developing post-inspection documentation · Spatial Analysis · Microsoft Office · Digital Transformation &amp; Process Optimization · MicroStation
+          </p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+  
+  
+  
+  
+
+
+
+  <!-- ========== EDUKACJA ========== -->
+  <section id="edukacja">
+    <h2>Edukacja</h2>
+    <div class="grid-section">
+
+      <!-- WSB -->
+      <article class="card skill-card">
+        <img class="skill-logo" src="image.png" alt="Logo WSB Szczecin">
+        <h3>Wyższa Szkoła Bankowa w Szczecinie</h3>
+        <p class="degree">Informatyka – studia inżynierskie (zaoczne)</p>
+        <p class="duration">2023 – 2027</p>
+        <ul class="achievements">
+          <li>Technologie webowe i mobilne</li>
+          <li>Konferencja IT Academic Day 2024</li>
+          <li>Projekt: System zarządzania danymi przestrzennymi</li>
+        </ul>
+      </article>
+
+      <!-- ZUT -->
+      <article class="card skill-card">
+        <img class="skill-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Logo_ZUT.png" alt="Logo ZUT Szczecin">
+        <h3>Zachodniopomorski Uniwersytet Technologiczny w Szczecinie</h3>
+        <p class="degree">Geodezja i Kartografia – studia inżynierskie (stacjonarne)</p>
+        <p class="duration">2013 – 2017</p>
+        <ul class="achievements">
+          <li>Fotogrametria i teledetekcja</li>
+          <li>GIS – mapy tematyczne i analizy</li>
+          <li>Koło naukowe Geodetów</li>
+        </ul>
+      </article>
+
+      <!-- TME -->
+      <article class="card skill-card">
+        <img class="skill-logo" src="https://tmie.pl/wp-content/uploads/2020/04/logo2.png" alt="Logo Technikum Morskie i Elektryczne">
+        <h3>Technikum Morskie i Elektryczne w Szczecinie</h3>
+        <p class="degree">Technik Elektronik / Technik Informatyk</p>
+        <p class="duration">2009 – 2013</p>
+        <ul class="achievements">
+          <li>Systemy cyfrowe i mikroprocesory</li>
+          <li>Programowanie układów PLC</li>
+          <li>Praktyki zawodowe na statkach i w zakładach produkcyjnych</li>
+        </ul>
+      </article>
+
+      <!-- UDEMY -->
+      <article class="card skill-card">
+        <img class="skill-logo" src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="Logo Udemy">
+        <h3>Kursy online – Udemy</h3>
+        <p class="degree">Szkolenia IT, Web Development, AI</p>
+        <p class="duration">2020 – obecnie</p>
+        <ul class="achievements">
+          <li>JavaScript: The Complete Guide 2023</li>
+          <li>Python for Data Science & GIS</li>
+          <li>HTML, CSS, React – From Zero to Hero</li>
+          <li>ChatGPT i AI w codziennej pracy</li>
+        </ul>
+      </article>
+
+    </div>
   </section>
 
-  <section>
-    <h2>Education</h2>
-    <ul>
-      <li>WSB University in Szczecin - Computer Science: in progress</li>
-      <li>VCC Certificate - Basics of 3D Design</li>
-      <!-- Add other education details -->
-    </ul>
-  </section>
 
-  <section>
-    <h2>Programs and Languages</h2>
-    <ul>
-      <li>QGIS, Microstation, Cyclone, TrueView</li>
-      <li>Gimp, Rhino3D, Blender, Kolor Panotour, 3DVista</li>
-      <li>Nubigon, DaVinciResolve, MS Sql Server, MS Office</li>
-      <li>HTML, CSS, JS, Python</li>
-    </ul>
-  </section>
 
-  <section>
-    <h2>Interests</h2>
-    <p>PUZZLE SOLVING, CULINARY EXPERIMENTS, CREATIVE WRITING</p>
+
+  <!-- ========== UMIEJĘTNOŚCI ========== -->
+  <section id="umiejetnosci">
+    <h2>Umiejętności techniczne</h2>
+    <div class="grid-section">
+      
+      <!-- Karta QGIS -->
+      <article class="card skill-card">
+        <img src="https://qgis.org/img/logosign.svg" alt="QGIS" class="skill-logo" />
+        <h3>QGIS</h3>
+        <p>Wykorzystywany do tworzenia i analizy danych przestrzennych oraz map w projektach ARiMR i dokumentacjach geodezyjnych.</p>
+      </article>
+      
+      <!-- Karta Microstation -->
+      <article class="card skill-card">
+        <img src="https://scontent-waw2-2.xx.fbcdn.net/v/t39.30808-1/327174945_959912648259842_3250689811071090100_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=107&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=8MukFg3LSzcQ7kNvgEH8BgR&_nc_oc=Adm6CEfurD3oOq1eGQaVyeJ6YHFI5doLtwlJOLZsD5evo1nGnabsGA7j_xkVCEz3oKg&_nc_zt=24&_nc_ht=scontent-waw2-2.xx&_nc_gid=n2JkJg4SyeF1ZBBIylVPZQ&oh=00_AYHuf5dmG_pMjzodIjhrIbEursI-YlNsJoN6OtkUaMwFwQ&oe=67E8C16C" alt="Microstation" class="skill-logo" />
+        <h3>Microstation</h3>
+        <p>Stosowany do konwersji i edycji danych CAD/GIS, kluczowy w projektach infrastrukturalnych i mapach.</p>
+      </article>
+      
+      
+      <!-- Karta GIMP -->
+      <article class="card skill-card">
+        <img src="https://www.gimp.org/images/frontpage/wilber-big.png" alt="GIMP" class="skill-logo" />
+        <h3>GIMP</h3>
+        <p>Edytor grafiki rastrowej do przygotowania materiałów wizualnych oraz retuszu zdjęć.</p>
+      </article>
+      
+      
+      <!-- Karta Figma -->
+      <article class="card skill-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" class="skill-logo" />
+        <h3>Figma</h3>
+        <p>Prototypowanie i projektowanie interfejsów, również w prezentacjach VR i interfejsach 3D.</p>
+      </article>
+      
+      
+      <!-- Karta 3DVista -->
+      <article class="card skill-card">
+        <img src="https://downloadlynet.ir/wp-content/uploads/2022/07/3DVista.png" alt="3DVista" class="skill-logo" />
+        <h3>3DVista</h3>
+        <p>Tworzenie wirtualnych spacerów i prezentacji VR, umożliwiających interaktywną wizualizację danych przestrzennych.</p>
+      </article>
+      
+      
+      <!-- Karta Nubigon -->
+      <article class="card skill-card">
+        <img src="https://yt3.googleusercontent.com/ytc/AIdro_kgfJAhf3Cn-3u2PUJ1Nm8gu76RW4emmB7hhQ-71Jb5gqI=s160-c-k-c0x00ffffff-no-rj" alt="Nubigon" class="skill-logo" />
+        <h3>Nubigon</h3>
+        <p>Renderowanie modeli z chmur punktów, stosowane do pracy z fotogrametrią i modelami budowlanymi 3D.</p>
+      </article>
+      
+      <!-- Karta Rhino3D -->
+      <article class="card skill-card">
+        <img src="https://www.rhino3d.com/images/rhino-logo.png" alt="Rhino3D" class="skill-logo" />
+        <h3>Rhino3D</h3>
+        <p>Projektowanie i analiza modeli 3D, wykorzystywane w geodezji oraz wizualizacji terenów i budowli.</p>
+      </article>
+      
+      
+      <!-- Karta Power BI -->
+      <article class="card skill-card">
+        <img src="https://qbico.pl/wp-content/uploads/2024/01/power-bi-multitenant-2-e1706108952587.png" alt="Power BI" class="skill-logo" />
+        <h3>Power BI</h3>
+        <p>Wizualizacja danych z projektów i tworzenie dashboardów do analiz biznesowych i przestrzennych.</p>
+      </article>
+      
+      
+      <!-- Karta HTML5 -->
+      <article class="card skill-card">
+        <img src="https://www.svgrepo.com/show/61215/html5.svg" alt="HTML5" class="skill-logo" />
+        <h3>HTML5</h3>
+        <p>Tworzenie stron internetowych oraz strukturyzacja treści projektów i portfolio.</p>
+      </article>
+      
+      <!-- Karta CSS3 -->
+      <article class="card skill-card">
+        <img src="https://www.svgrepo.com/show/349330/css3.svg" alt="CSS3" class="skill-logo" />
+        <h3>CSS3</h3>
+        <p>Stylizacja layoutu strony, responsywny design oraz zachowanie nowoczesnych standardów UI.</p>
+      </article>
+      
+      <!-- Karta JavaScript -->
+      <article class="card skill-card">
+        <img src="https://www.svgrepo.com/show/349419/javascript.svg" alt="JavaScript" class="skill-logo" />
+        <h3>JavaScript</h3>
+        <p>Tworzenie dynamicznych komponentów, interaktywność oraz implementacja nowoczesnych rozwiązań webowych.</p>
+      </article>
+      
+      <!-- Karta Python -->
+      <article class="card skill-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Python.svg" alt="Python" class="skill-logo" />
+        <h3>Python</h3>
+        <p>Analiza danych, automatyzacja zadań oraz wsparcie procesów GIS i przetwarzania danych.</p>
+      </article>
+      
+    
+    </div>
   </section>
+  
+
+  <!-- ========== UMIEJĘTNOŚCI MIĘKKIE ========== -->
+  <section id="umiejetnosci-miekkie">
+    <h2>Umiejętności miękkie</h2>
+    <div class="grid-section">
+      <!-- Karta: Komunikatywność -->
+      <article class="card skill-card">
+        <img src="icons/Komunikatywność.webp" alt="Komunikatywność" class="skill-logo" />
+        <h3>Komunikatywność</h3>
+        <p>
+          Potrafię efektywnie komunikować się, przekazując jasne i precyzyjne informacje zarówno wewnątrz zespołu, jak i z klientami.
+        </p>
+      </article>
+  
+      <!-- Karta: Samodzielność -->
+      <article class="card skill-card">
+        <img src="icons/Samodzielność.webp" alt="Samodzielność" class="skill-logo" />
+        <h3>Samodzielność</h3>
+        <p>
+          Wykazuję wysoką samodzielność w podejmowaniu decyzji i organizacji pracy, co pozwala mi skutecznie realizować powierzone zadania.
+        </p>
+      </article>
+  
+      <!-- Karta: Zarządzanie czasem -->
+      <article class="card skill-card">
+        <img src="icons/Zarządzanie czasem.webp" alt="Zarządzanie czasem" class="skill-logo" />
+        <h3>Zarządzanie czasem</h3>
+        <p>
+          Efektywnie planuję zadania i dbam o terminowość realizacji projektów, co umożliwia utrzymanie wysokiej jakości pracy nawet w dynamicznych warunkach.
+        </p>
+      </article>
+  
+      <!-- Karta: Elastyczność -->
+      <article class="card skill-card">
+        <img src="icons/Elastyczność.webp" alt="Elastyczność" class="skill-logo" />
+        <h3>Elastyczność</h3>
+        <p>
+          Szybko adaptuję się do zmian i efektywnie działam w dynamicznym środowisku, dostosowując metody pracy do aktualnych wyzwań.
+        </p>
+      </article>
+  
+      <!-- Karta: Rozwiązywanie problemów -->
+      <article class="card skill-card">
+        <img src="icons/Rozwiązywanie problemów.webp" alt="Rozwiązywanie problemów" class="skill-logo" />
+        <h3>Rozwiązywanie problemów</h3>
+        <p>
+          Analizuję trudności z różnych perspektyw, co pozwala mi znajdować praktyczne, innowacyjne rozwiązania nawet w wymagających sytuacjach.
+        </p>
+      </article>
+  
+      <!-- Karta: Rozwój osobisty -->
+      <article class="card skill-card">
+        <img src="icons/Rozwój osobisty.webp" alt="Rozwój osobisty" class="skill-logo" />
+        <h3>Rozwój osobisty</h3>
+        <p>
+          Stale podnoszę swoje kwalifikacje poprzez naukę, szkolenia i wdrażanie nowych metod pracy, co przekłada się na ciągły rozwój zawodowy.
+        </p>
+      </article>
+    </div>
+  </section>
+  
+
+  <!-- ========== JĘZYKI ========== -->
+  <section id="jezyki">
+    <h2>Języki obce</h2>
+    <div class="grid-section">
+      <!-- Karta: Niemiecki -->
+      <article class="card skill-card">
+        <img src="https://flagcdn.com/w320/de.png" alt="Flaga Niemiec" class="skill-logo" />
+        <h3>Niemiecki</h3>
+        <p>Poziom A1 – podstawowa komunikacja, zrozumienie poleceń, słownictwo techniczne i ogólne.</p>
+      </article>
+      <!-- Karta: Angielski -->
+      <article class="card skill-card">
+        <img src="https://flagcdn.com/w320/gb.png" alt="Flaga Wielkiej Brytanii" class="skill-logo" />
+        <h3>Angielski</h3>
+        <p>Poziom B2 – swobodna komunikacja, dokumentacja techniczna, praca z oprogramowaniem i prezentacje VR.</p>
+      </article>
+    </div>
+  </section>
+  
+  
+  
+  
+
+  <!-- ========== STOPKA ========== -->
+  <footer>
+    &copy; 2025 Adrian Łukasiewicz | Wszystkie prawa zastrzeżone
+  </footer>
+
+<!-- ========== SKRYPT ========== -->
+<script>
+  // Po kliknięciu w hamburger przełączamy klasę .nav-open na <body>
+  const hamburgerBtn = document.querySelector('.hamburger');
+  hamburgerBtn.addEventListener('click', () => {
+    document.body.classList.toggle('nav-open');
+  });
+
+  // Opcjonalnie – po kliknięciu w link w menu chowamy panel:
+  const navLinks = document.querySelectorAll('.nav-list ul li a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      document.body.classList.remove('nav-open');
+    });
+  });
+</script>
+
+<!-- === DOLNA NAWIGACJA MOBILNA === -->
+<nav class="bottom-nav">
+  <a href="#o-mnie" class="nav-item" aria-label="O mnie">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="O mnie">
+    <span>O mnie</span>
+  </a>
+  <a href="#doswiadczenie" class="nav-item" aria-label="Doświadczenie">
+    <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Doświadczenie">
+    <span>Praca</span>
+  </a>
+  <a href="#umiejetnosci" class="nav-item" aria-label="Umiejętności">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Umiejętności">
+    <span>Skills</span>
+  </a>
+  <a href="#kontakt" class="nav-item" aria-label="Kontakt">
+    <img src="https://cdn-icons-png.flaticon.com/512/159/159832.png" alt="Kontakt">
+    <span>Kontakt</span>
+  </a>
+</nav>
+
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Inicjalizacja AOS z przykładowymi ustawieniami
+  AOS.init({
+    offset: 120,        // odległość w px od dołu ekranu, w której zaczyna się animacja
+    duration: 800,      // czas trwania animacji w ms
+    easing: 'ease-in-out',
+    delay: 0,           // globalne opóźnienie animacji
+    once: false,        // animacja uruchamia się przy każdym przewinięciu
+  });
+</script>
+
 
 </body>
 </html>

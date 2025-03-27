@@ -1,0 +1,762 @@
+/* 
+========================================================
+style.css – plik scalający wszystkie style projektu
+Autor: [Twoje Imię i Nazwisko]
+Data: [Aktualna data]
+========================================================
+
+Zawiera sekcje:
+1) Zmienne i reset (Base)
+2) Layout – header, footer, bannery, responsywność
+3) Komponenty i karty .card (zawiera też .glass z experience.css)
+4) Sekcja .education-card
+5) Dodatkowe style (np. bottom-nav)
+========================================================
+*/
+
+/* 
+============================
+1) BASE – Zmienne i reset
+============================
+*/
+:root {
+    --bg-dark: #121212;
+    --card-bg: #1e1e1e;
+    --text-main: #E3DAC9;
+    --accent: #CD7F32;
+    --highlight: #FFA447;
+    --radius: 16px;
+    --shadow: rgba(0, 0, 0, 0.3);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+  }
+  
+  /* Obrazki, elementy multimedialne */
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* Listy – usuwamy domyślne style */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Linki – domyślny wygląd */
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  /* Dodatkowe globalne reguły */
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+  
+  
+  /* 
+  ============================
+  2) LAYOUT – Header, Footer, Banner, Responsywność
+  ============================
+  */
+  
+  /* HEADER */
+  header {
+    background-color: #1e1e1e;
+    padding: 16px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 10px var(--shadow);
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .logo {
+    background-color: var(--highlight);
+    color: #000;
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 10px 14px;
+    border-radius: 50%;
+  }
+  
+  .brand-info h1 {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  .brand-info p {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  /* Nawigacja desktop */
+  .nav-list {
+    position: static;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-list ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  
+  .nav-list a {
+    color: var(--text-main);
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-list a:hover {
+    color: var(--highlight);
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Przycisk hamburger – domyślnie ukryty w desktop */
+  .hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .hamburger:hover {
+    color: var(--highlight);
+  }
+  
+  /* SEKCJE */
+  section {
+    padding: 40px 10%;
+    margin-bottom: 32px;
+  }
+  
+  section:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+  
+  /* BANER (hero) */
+  .banner {
+    width: 100vw;
+    min-height: 80vh;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #1e1e1e, #121212);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    border-radius: 0;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    animation: fadeInBanner 1s ease-out both;
+  }
+  
+  .banner h2 {
+    font-size: 2.6rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  
+  .banner p {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    max-width: 800px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  
+  /* Przycisk */
+  .btn-primary {
+    display: inline-block;
+    background-color: var(--highlight);
+    color: #000;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn-primary:hover {
+    background-color: #ff9633;
+    transform: translateY(-2px);
+  }
+  
+  .btn-primary:active {
+    transform: scale(0.98);
+  }
+  
+  @keyframes fadeInBanner {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* GRID LAYOUT */
+  .grid-section {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items: stretch;
+    margin-top: 16px;
+  }
+  
+  /* STOPKA */
+  footer {
+    background-color: #181818;
+    text-align: center;
+    padding: 20px;
+    color: #A0A4A8;
+    font-size: 0.9em;
+  }
+  
+  /* 
+  ============================
+  RESPONSYWNOŚĆ – max-width: 768px
+  ============================
+  */
+  @media (max-width: 768px) {
+    /* Header */
+    .header-container {
+      gap: 12px;
+    }
+    .logo {
+      font-size: 1.2rem;
+      padding: 8px 12px;
+    }
+    .brand-info h1 {
+      font-size: 1rem;
+    }
+  
+    /* Pokaż hamburger, ukryj listę */
+    .hamburger {
+      display: block;
+    }
+    .nav-list {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: #1e1e1e;
+      box-shadow: -4px 0 8px rgba(0, 0, 0, 0.4);
+      padding: 80px 16px;
+      z-index: 9999;
+      transition: right 0.3s ease;
+    }
+    .nav-list ul {
+      flex-direction: column;
+      gap: 16px;
+    }
+    .nav-list a {
+      width: 100%;
+      text-align: left;
+      font-size: 1.1rem;
+    }
+    body.nav-open .nav-list {
+      right: 0;
+    }
+  
+    /* Bottom-nav (mobilne) */
+    .bottom-nav {
+      display: flex;
+    }
+
+  
+    /* Baner (drobne dopasowanie fontów) */
+    .banner h2 {
+      font-size: 2rem;
+    }
+    .banner p {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* 
+  ============================
+  3) Karty (.card, skill-card)
+  ============================
+  */
+  .card {
+    margin: 0;
+    padding: 32px;
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: 0 6px 16px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+    color: var(--highlight);
+    margin-bottom: 8px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: var(--text-main);
+    line-height: 1.6;
+  }
+  
+  /* Karty umiejętności */
+  .card.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+    gap: 16px;
+    min-height: 100px;
+  }
+  
+  .card.skill-card img,
+  .card.skill-card .skill-logo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 12px;
+    background-color: #ffffff15;
+    padding: 8px;
+    transition: transform 0.3s ease;
+    margin-bottom: 8px;
+  }
+  
+  .card.skill-card img:hover,
+  .card.skill-card .skill-logo:hover {
+    transform: scale(1.05);
+  }
+  
+  /* 
+  ============================
+  4) Efekt "Glass" – 
+     .skill-card.glass (experience.css)
+  ============================
+  */
+  .skill-card.glass {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 28px;
+    width: 100%;
+    max-width: 360px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    color: #f1f1f1;
+    transition: all 0.3s ease;
+  }
+  
+  .skill-card.glass:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+  }
+  
+  .skill-card.glass h3 {
+    color: #ffa640;
+    font-size: 1.3rem;
+    margin-top: 12px;
+    text-align: center;
+  }
+  
+  /* Tagi technologii */
+  .skill-card.glass .achievements {
+    font-size: 0.9rem;
+    margin: 16px 0;
+    color: #eee;
+    list-style-type: none;
+    line-height: 1.6;
+  }
+  
+  .skill-card.glass .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-start;
+  }
+  
+  .skill-card.glass .tech-tags span {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    color: #fff;
+    backdrop-filter: blur(4px);
+    white-space: nowrap;
+    transition: background 0.3s ease;
+  }
+  
+  .skill-card.glass .tech-tags span:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #111;
+  }
+  
+  /* 
+  ============================
+  5) Karta EDUKACJA (education.css)
+  ============================
+  */
+  .card.education-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 32px;
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 20px var(--shadow);
+  }
+  
+  .education-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 12px;
+  }
+  
+  .education-card h3 {
+    font-size: 1.5rem;
+    color: var(--highlight);
+    margin-top: 8px;
+  }
+  
+  .education-card .degree {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  
+  .education-card .duration {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 16px;
+  }
+  
+  .education-title {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    margin-top: 12px;
+  }
+  
+  .education-features {
+    list-style: none;
+    padding: 0;
+    margin-top: 12px;
+    text-align: left;
+  }
+  
+  .education-features li {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+  }
+  
+  .education-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--highlight);
+    font-weight: bold;
+  }
+  
+  /* 
+  ============================
+  6) DOLNA NAWIGACJA MOBILNA
+  ============================
+  */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background-color: #121212;
+    display: none; /* Pojawia się w mobile */
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-main);
+    font-size: 0.75rem;
+    font-weight: 500;
+    gap: 4px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-item img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.85;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+  }
+  
+  .nav-item:hover img {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  
+  .nav-item span {
+    font-size: 0.7rem;
+    color: var(--text-main);
+  }
+
+
+/* 
+===============================================
+TIMELINE SECTION – GRID + FLEX
+Autor: [Twoje Imię]
+Data: [Aktualna data]
+
+Założenia:
+- Używamy zmiennych w :root (np. --card-bg, --highlight, itp.)
+- Layout oparty na Grid w .timeline oraz Flex/Bloczki w .timeline-item
+===============================================
+*/
+
+/* Sekcja i tytuł */
+.timeline-section {
+  padding: 60px 10%;
+  background-color: var(--bg-dark);
+}
+.timeline-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--highlight);
+  margin-bottom: 40px;
+}
+
+/* 
+.timeline – GŁÓWNY GRID
+Dwie kolumny:
+  - pierwsza (40-60px) na linię i kropkę
+  - druga "auto" na treść karty
+*/
+.timeline {
+  display: grid;
+  grid-template-columns: 60px 1fr; /* lewa wąska, prawa szeroka */
+  gap: 32px 24px;                  /* odstępy: 32px w pionie, 24px w poziomie */
+  max-width: 1200px;              /* ograniczenie szerokości w desktop */
+  margin: 0 auto;                 /* centrowanie całej siatki */
+}
+
+/* Każdy etap (item) to wiersz w gridzie */
+.timeline-item {
+  display: contents; /* sprawia, że .timeline-line i .timeline-content są bezpośrednio w kolumnach gridu */
+}
+
+/* 
+ .timeline-line – kolumna 1 
+   - rysujemy pionową kreskę i kropkę
+*/
+.timeline-line {
+  position: relative;
+  width: 100%;
+  height: 100%; /* dopasuje się do wysokości contentu */
+  display: flex; 
+  justify-content: center; /* wyrównanie kropki w osi poziomej */
+}
+
+.timeline-line::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: 0;
+  bottom: 0; /* rozciąga linię na całą wysokość elementu */
+  left: 50%; /* w połowie kolumny */
+  transform: translateX(-50%);
+}
+
+.timeline-dot {
+  position: relative;
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  margin-top: 10px; /* od góry, by kropka wpasowała się w początek contentu */
+  background-color: var(--highlight);
+  border-radius: 50%;
+}
+
+/* .timeline-content – kolumna 2 */
+.timeline-content {
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 16px var(--shadow);
+  padding: 24px 28px;
+  position: relative;
+}
+
+/* Możesz dodać styl logo, tytułu, achievements etc. jak wcześniej */
+.timeline-content .company-logo {
+  float: right;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-left: 8px;
+  margin-bottom: 8px;
+  background-color: #ffffff15;
+  border-radius: 8px;
+  padding: 8px;
+}
+.timeline-content h3 {
+  font-size: 1.3rem;
+  color: var(--highlight);
+  margin-bottom: 6px;
+}
+.timeline-content h3 span {
+  color: #aaa;
+  font-size: 1rem;
+}
+.timeline-content .company-name {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 4px;
+}
+.timeline-content .duration {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 12px;
+}
+.timeline-content .achievements {
+  list-style: none;
+  margin-bottom: 16px;
+}
+.timeline-content .achievements li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #eee;
+}
+.timeline-content .skills {
+  font-size: 0.9rem;
+  color: #ddd;
+  background-color: rgba(255,255,255,0.08);
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* 
+=================================
+RESPONSYWNOŚĆ (mobile)
+=================================
+*/
+@media (max-width: 768px) {
+  /* W wąskich ekranach przechodzimy na jedną kolumnę */
+  .timeline {
+    grid-template-columns: 1fr; /* jedna kolumna */
+    gap: 40px;                  /* większy odstęp między kartami */
+  }
+  /* timeline-item – w trybie mobile, 
+     .timeline-line i .timeline-content ułożą się jeden pod drugim
+  */
+  .timeline-item {
+    display: block; 
+  }
+  .timeline-line {
+    position: relative;
+    height: auto;
+    margin-bottom: 8px; 
+  }
+  .timeline-line::before {
+    top: 50%;   /* tak, by była krótka linia, 
+                   lub: top: 0, bottom: 0, 
+                   by rozciągać się na cały element */
+    bottom: auto;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+  .timeline-dot {
+    margin: 0 auto;  /* kropka na środku linii */
+    margin-top: -7px; /* żeby wpasować się w środek grubości linii */
+  }
+  .timeline-content {
+    margin: 0; /* zero automatycznych marginesów */
+    max-width: 100%;
+  }
+}
+
+  
+  /* 
+  ========================================================
+  KONIEC PLIKU
+  ========================================================
+  */
+  
