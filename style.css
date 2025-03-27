@@ -1,8 +1,8 @@
 /* 
 ========================================================
 style.css – plik scalający wszystkie style projektu
-Autor: [Twoje Adrian Łukasiewicz]
-Data: [25.03.2025]
+Autor: [Twoje Imię i Nazwisko]
+Data: [Aktualna data]
 ========================================================
 
 Zawiera sekcje:
@@ -753,7 +753,139 @@ RESPONSYWNOŚĆ (mobile)
   }
 }
 
+  /* 
+===================================================
+SEKCJA EDUKACJA – STYL KART W SIATCE
+===================================================
+*/
+#edukacja {
+  padding: 60px 10%;
   
+     background: linear-gradient(120deg, #1e1e1e 0%, #202020 100%);
+  
+}
+
+#edukacja h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--highlight);
+  margin-bottom: 40px;
+}
+
+/* Layout siatki z kartami */
+#edukacja .grid-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start; /* można użyć stretch, jeśli chcesz zrównywać wysokości */
+}
+
+/* KARTA EDUKACYJNA */
+#edukacja .card.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--card-bg);
+  box-shadow: 0 6px 16px var(--shadow);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efekt hover – subtelne uniesienie */
+#edukacja .card.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.5);
+}
+
+/* Logo uczelni/kursu */
+#edukacja .skill-logo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  background-color: #ffffff15;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+/* Tytuł uczelni */
+#edukacja .card.skill-card h3 {
+  font-size: 1.3rem;
+  color: var(--highlight);
+  margin-bottom: 8px;
+}
+
+/* Kierunek, typ studiów */
+#edukacja .card.skill-card .degree {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+/* Daty studiowania */
+#edukacja .card.skill-card .duration {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 12px;
+}
+
+/* Akapity z opisem/osiągnięciami */
+#edukacja .card.skill-card p {
+  color: var(--text-main);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  text-align: left; /* lub center, jeśli wolisz */
+  width: 100%;
+  max-width: 100%; 
+  /* Dla czytelności – można ograniczyć szerokość do np. 80%:
+     max-width: 80%; 
+     margin: 0 auto; 
+  */
+}
+
+/* Wyróżnienie w tekście */
+#edukacja .card.skill-card p strong {
+  color: var(--highlight);
+}
+
+/* Możesz dodać animacje AOS */
+#edukacja .card.skill-card[data-aos] {
+  /* brak dodatkowych stylów – AOS i tak zadziała */
+}
+
+/* 
+=================================
+RESPONSYWNOŚĆ
+=================================
+*/
+@media (max-width: 768px) {
+  #edukacja {
+    padding: 40px 5%;
+  }
+  #edukacja .grid-section {
+    gap: 24px;
+  }
+  #edukacja .card.skill-card {
+    padding: 20px;
+  }
+  #edukacja .card.skill-card h3 {
+    font-size: 1.1rem;
+  }
+  #edukacja .card.skill-card .degree {
+    font-size: 0.95rem;
+  }
+  #edukacja .card.skill-card .duration {
+    font-size: 0.8rem;
+  }
+  #edukacja .card.skill-card p {
+    font-size: 0.95rem;
+  }
+}
+
   /* 
   ========================================================
   KONIEC PLIKU
