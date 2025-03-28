@@ -1,0 +1,68 @@
+/* ===============================
+   Karty – Ogólne style .card
+=============================== */
+.card {
+    margin: 0;
+    padding: 32px;
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: 0 6px 16px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  }
+  .card h3 {
+    font-size: 1.2rem;
+    color: var(--highlight);
+    margin-bottom: 8px;
+  }
+  .card p {
+    font-size: 1rem;
+    color: var(--text-main);
+    line-height: 1.6;
+  }
+  
+  /* ===============================
+     Karty umiejętności – .skill-card
+     (wszystkie karty umiejętności: twarde, miękkie, językowe)
+  =============================== */
+  .card.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+    gap: 16px;
+    min-height: 100px;
+  }
+  
+  .card.skill-card img,
+  .card.skill-card .skill-logo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 12px;
+    background-color: #ffffff15;
+    padding: 8px;
+    transition: transform 0.3s ease;
+    margin-bottom: 8px;
+  }
+  .card.skill-card img:hover,
+  .card.skill-card .skill-logo:hover {
+    transform: scale(1.05);
+  }
+  
+  .card.skill-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  .card.skill-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 90%;
+    text-align: center;
+  }
+  

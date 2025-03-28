@@ -1,0 +1,221 @@
+/* =============================================================
+   layout.css – Style układu strony
+   Zawiera: Header, Nawigację, Sekcje, Grid, Timeline, Stopkę, Responsywność,
+   oraz dodatkowe reguły dla elementów wyróżniających (.tag)
+============================================================= */
+
+/* ----------------------------
+   HEADER i NAWIGACJA
+---------------------------- */
+header {
+    background-color: #1e1e1e;
+    padding: 16px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 10px var(--shadow);
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .logo {
+    background-color: var(--highlight);
+    color: #000;
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 10px 14px;
+    border-radius: 50%;
+  }
+  
+  .brand-info h1 {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  .brand-info p {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  .nav-list {
+    position: static;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-list ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  
+  .nav-list a {
+    color: var(--text-main);
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-list a:hover {
+    color: var(--highlight);
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .hamburger:hover {
+    color: var(--highlight);
+  }
+  
+  /* ----------------------------
+     SEKCJE I GRID
+  ---------------------------- */
+  section {
+    padding: 40px 10%;
+    margin-bottom: 32px;
+  }
+  
+  section:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+  
+  .grid-section {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items: stretch;
+    margin-top: 16px;
+  }
+  
+  /* ----------------------------
+     BANER (HERO)
+  ---------------------------- */
+  .banner {
+    width: 100vw;
+    min-height: 80vh;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #1e1e1e, #121212);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    animation: fadeInBanner 1s ease-out both;
+  }
+  
+  .banner h2 {
+    font-size: 2.6rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  
+  .banner p {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    max-width: 800px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  
+  @keyframes fadeInBanner {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ----------------------------
+     STOPKA
+  ---------------------------- */
+  footer {
+    background-color: #181818;
+    text-align: center;
+    padding: 20px;
+    color: #A0A4A8;
+    font-size: 0.9em;
+  }
+  
+  /* ----------------------------
+     RESPONSYWNOŚĆ – Mobile
+  ---------------------------- */
+  @media (max-width: 768px) {
+    .header-container {
+      gap: 12px;
+    }
+    .logo {
+      font-size: 1.2rem;
+      padding: 8px 12px;
+    }
+    .brand-info h1 {
+      font-size: 1rem;
+    }
+    .hamburger {
+      display: block;
+    }
+    .nav-list {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: #1e1e1e;
+      box-shadow: -4px 0 8px rgba(0,0,0,0.4);
+      padding: 80px 16px;
+      z-index: 9999;
+      transition: right 0.3s ease;
+    }
+    .nav-list ul {
+      flex-direction: column;
+      gap: 16px;
+    }
+    .nav-list a {
+      width: 100%;
+      text-align: left;
+      font-size: 1.1rem;
+    }
+    body.nav-open .nav-list {
+      right: 0;
+    }
+    .banner h2 {
+      font-size: 2rem;
+    }
+    .banner p {
+      font-size: 1.1rem;
+    }
+  }
+  
+
+  

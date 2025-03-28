@@ -1,0 +1,96 @@
+/* ===============================
+   Karta EDUKACJA – .education-card
+=============================== */
+.card.education-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 32px;
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 20px var(--shadow);
+  }
+  .education-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 12px;
+  }
+  .education-card h3 {
+    font-size: 1.5rem;
+    color: var(--highlight);
+    margin-top: 8px;
+  }
+  .education-card .degree {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .education-card .duration {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 16px;
+  }
+  .education-title {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    margin-top: 12px;
+  }
+  .education-features {
+    list-style: none;
+    padding: 0;
+    margin-top: 12px;
+    text-align: left;
+  }
+  .education-features li {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+  }
+  .education-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--highlight);
+    font-weight: bold;
+  }
+  /* Kontener nagłówka karty edukacyjnej */
+.edu-card .edu-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  /* Blok tekstowy obok logo */
+  .edu-card .edu-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  /* Ciało karty edukacyjnej */
+  .edu-card .edu-body {
+    margin-bottom: 16px; /* odstęp pod opisem */
+  }
+  
+  /* Sekcja tagów */
+  .edu-card .edu-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .edu-card .edu-tags .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
